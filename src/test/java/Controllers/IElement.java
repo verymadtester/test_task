@@ -1,4 +1,4 @@
-package java.Controllers;
+package Controllers;
 
 /**
  * Created by Sergei_Shatilov on 12/22/2016.
@@ -9,6 +9,6 @@ public interface IElement {
 
     String getValue();
 
-    String getText(String value);
+    String getText();
 
 }

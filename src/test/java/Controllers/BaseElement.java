@@ -1,4 +1,4 @@
-package java.Controllers;
+package Controllers;
 
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;

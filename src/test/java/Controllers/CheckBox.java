@@ -1,4 +1,4 @@
-package java.Controllers;
+package Controllers;
 
 import org.openqa.selenium.WebElement;
 
@@ -34,7 +34,7 @@ public class CheckBox extends BaseElement {
     }
 
     @Override
-    public String getText(String value) {
-        return value;
+    public String getText() {
+        return webElement.getText();
     }
 }

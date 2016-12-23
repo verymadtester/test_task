@@ -1,4 +1,4 @@
-package java.Controllers;
+package Controllers;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -34,8 +34,8 @@ public class Textbox extends BaseElement {
     }
 
     @Override
-    public String getText(String value) {
-        return value;
+    public String getText() {
+        return webElement.getText();
     }
 
     public void clearText() {

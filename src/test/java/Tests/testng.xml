@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Tests" verbose="1" data-provider-thread-count="20" configfailurepolicy="continue">
+    <listeners>
+        <listener class-name="Utils.TestListener" />
+    </listeners>
+    <test name="hhTests" skipfailedinvocationcounts="true" group-by-instances="true">
+        <classes>
+            <class name="Tests.hhTests" />
+        </classes>
+    </test>
+
+</suite>

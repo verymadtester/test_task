@@ -1,4 +1,4 @@
-package java.Controllers;
+package Controllers;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -26,8 +26,8 @@ public class DropDown extends BaseElement {
     }
 
     @Override
-    public String getText(String value) {
-        return value;
+    public String getText() {
+        return webElement.getText();
     }
 
     public boolean isChecked() {
