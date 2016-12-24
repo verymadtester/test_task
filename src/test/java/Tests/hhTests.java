@@ -68,7 +68,8 @@ public class hhTests extends BasicTest {
     @Test
     public void c_findQAVacancies(){
         searchPage.itVacancies.click();
-        Assert.assertEquals(searchPage.qaPosition.getText(), "QA Automation Engineer (Server)");
+        Assert.assertEquals(searchPage.qaPosition("QA Automation Engineer (Server)").getText(), "QA Automation Engineer (Server)");
+        Assert.assertEquals(searchPage.qaPosition("Senior QA Automation Engineer").getText(), "Senior QA Automation Engineer");
     }
 
     @AfterClass

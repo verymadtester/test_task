@@ -3,7 +3,6 @@ package Pages;
 import Controllers.Button;
 import Controllers.Link;
 import Controllers.Textbox;
-import Utils.Configuration;
 import Utils.CustomFieldDecorator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
@@ -35,10 +34,6 @@ public class LoginPage extends BasePage{
     }
 
     public WebDriver driver;
-
-    protected Configuration getConfig() {
-        return Configuration.getInstance();
-    }
 
     public void loadPage() {
         driver.get("https://spb.hh.ru/");

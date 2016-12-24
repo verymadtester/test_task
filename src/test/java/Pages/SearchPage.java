@@ -1,10 +1,10 @@
 package Pages;
 
-import Controllers.Button;
 import Controllers.DropDown;
 import Controllers.Link;
 import Controllers.Textbox;
 import Utils.CustomFieldDecorator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,9 +18,6 @@ public class SearchPage extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//select[contains(@class, \"HH-Navi-SearchSelector-Select\")]")
     public DropDown searchOptionsButton;
-
-    @FindBy(how = How.XPATH, using = "//select[contains(@class, \"HH-Navi-SearchSelector-Select\")]/option")
-    public Button searchOption;
 
     @FindBy(how = How.XPATH, using = "//input[contains(@class, \"HH-EmployersSearchRedirect-Suggest\")]")
     public Textbox searchPanel;
@@ -43,9 +40,6 @@ public class SearchPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//div[@class=\"b-employerpage-vacancies g-expand\"]//a[contains(text(), 'Информационные технологии, интернет, телеком')]")
     public Link itVacancies;
 
-    @FindBy(how = How.XPATH, using = "//div[@class=\"b-employerpage-vacancies g-expand\"]//a[contains(., 'QA Automation Engineer')]")
-    public Link qaPosition;
-
     public SearchPage(WebDriver driver){
         PageFactory.initElements(new CustomFieldDecorator(this, driver), this);
         this.driver = driver;
@@ -65,5 +59,9 @@ public class SearchPage extends BasePage {
 
     public void openCompanyPage(){
         searchResult.click();
+    }
+
+    public WebElement qaPosition(String positionName) {
+        return driver.findElement(By.xpath("//div[@class='b-employerpage-vacancies g-expand']//a[contains(text(), '"+ positionName +"')]"));
     }
 }
