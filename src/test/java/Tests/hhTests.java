@@ -62,7 +62,7 @@ public class hhTests extends BasicTest {
         searchPage.openCompanyPage();
         Assert.assertEquals(searchPage.companyTitle.getText(), "Новые Облачные Технологии ");
         Assert.assertThat(searchPage.vacanciesRegion.getText(), CoreMatchers.containsString("Северо-Западный округ"));
-        Assert.assertEquals(searchPage.vacanciesCount.getText(), "14");
+        Assert.assertEquals(searchPage.vacanciesCount.getText(), "12");
     }
 
     @Test

@@ -20,7 +20,7 @@ public class Configuration {
             configuration = new Configuration();
             configuration.properties = new Properties();
             try {
-                configuration.properties.load(Configuration.class.getResourceAsStream("./target.properties"));
+                configuration.properties.load(Configuration.class.getResourceAsStream("/target.properties"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -40,7 +40,7 @@ public class Configuration {
 
     public String getBase() {
         System.out.println("I am here");
-        return base = properties.getProperty("url");
+        return (base != null) ? base : (base = properties.getProperty("url.base"));
     }
 
 }
